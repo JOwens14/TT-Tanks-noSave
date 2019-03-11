@@ -69,6 +69,10 @@ function StartCombat(canvas, context) {
           T2.pos.set(900, 600);
           T3.pos.set(600, 300);
           T4.pos.set(500, 500);
+          T5.pos.set(100, 400);
+          T6.pos.set(600, 600);
+          T7.pos.set(300, 300);
+          T8.pos.set(200, 500);
           T1.damage = 0;
           T1.alive = true;
           T2.damage = 0;
@@ -77,6 +81,16 @@ function StartCombat(canvas, context) {
           T3.alive = true;
           T4.damage = 0;
           T4.alive = true;
+          T5.damage = 0;
+          T5.alive = true;
+          T6.damage = 0;
+          T6.alive = true;
+          T7.damage = 0;
+          T7.alive = true;
+          T8.damage = 0;
+          T8.alive = true;
+
+          score = 0;
         }
       };
       this.addEventListener('keypress', resethandler, false);

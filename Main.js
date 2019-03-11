@@ -19,37 +19,7 @@ var score = 0;
 window.onload = function() {
   const canvas = document.getElementById('gameWorld');
   const context = canvas.getContext('2d');
-  //-----------------------------------------------------------------------------------------SAVE/Loaded
-
-
-  var socket = io.connect("http://24.16.255.56:8888");
-
-  socket.on("load", function (data) {
-      //console.log(data);
-      score = data.data;
-      //levelObject.levelLoad(saveState);
-  });
-
-  var text = document.getElementById("text");
-  var saveButton = document.getElementById("save");
-  var loadButton = document.getElementById("load");
-
-  saveButton.onclick = function () {
-    console.log("save");
-    saveState = levelObject.levelSave();
-    //console.log(saveState);
-    text.innerHTML = "Saved."
-    socket.emit("save", { studentname: "Jacob Owens", statename: "aState", data: score});
-  };
-
-  loadButton.onclick = function () {
-    console.log("load");
-    text.innerHTML = "Loaded."
-    socket.emit("load", { studentname: "Jacob Owens", statename: "aState"});
-    //console.log(data);
-  };
-
-  //----------------------------------------------------------------------------------------------------
+  
 
   //start of fullscreen resizing -----------------------------------------------------------------
   function resize() {

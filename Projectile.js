@@ -45,7 +45,7 @@ function createProjectile(name, originEntity, direction) {
       } else {
           Projectile.size.set(32, 9);
           Projectile.animation = new Animation(ASSET_MANAGER.getAsset(
-              "./Projectiles/arrow.png"), 0, 0, 400, 110, 1, 1, true, false);
+              "./Projectiles/Arrow.png"), 0, 0, 400, 110, 1, 1, true, false);
           }
     }
 
